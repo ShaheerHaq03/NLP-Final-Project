@@ -1,0 +1,61 @@
+{
+  "run_name": "MNLI_3way",
+  "train_dataset": "MNLI",
+  "model_name": "t5-small",
+  "train_examples": 50000,
+  "dev_examples": 600,
+  "elapsed_seconds": 2580.41,
+  "training_schedule": "step_based",
+  "max_train_steps": 4000,
+  "best_global_step": 4000,
+  "best_dev_accuracy": 0.7933333333333333,
+  "effective_batch_size": 32,
+  "checkpoint_every_steps": 1000,
+  "dropout_rate": 0.1,
+  "config": {
+    "output_dir": "outputs_assignment2_final",
+    "model_name": "t5-small",
+    "max_train_per_public_dataset": 50000,
+    "max_train_combo": 50000,
+    "max_eval_per_dataset": 2000,
+    "gnli_examples_per_domain_length": 250,
+    "batch_size": 4,
+    "grad_accum_steps": 8,
+    "eval_batch_size": 8,
+    "learning_rate": 0.0005,
+    "max_input_length": 512,
+    "max_target_length": 8,
+    "checkpoint_every_steps": 1000,
+    "select_best_checkpoint": true,
+    "use_paper_steps": false,
+    "max_steps_by_dataset": {
+      "MNLI": 4000,
+      "ANLI": 4500,
+      "WANLI": 2000,
+      "GNLI_PROXY": 4000,
+      "MNLI+ANLI+WANLI": 4000,
+      "MNLI+GNLI_PROXY": 3000,
+      "ANLI+GNLI_PROXY": 1500,
+      "WANLI+GNLI_PROXY": 4000
+    },
+    "paper_steps_by_dataset": {
+      "MNLI": 40000,
+      "ANLI": 45000,
+      "WANLI": 10000,
+      "GNLI_PROXY": 50000,
+      "MNLI+ANLI+WANLI": 40000,
+      "MNLI+GNLI_PROXY": 25000,
+      "ANLI+GNLI_PROXY": 5000,
+      "WANLI+GNLI_PROXY": 50000
+    },
+    "run_combinations": true,
+    "run_maw": true,
+    "save_models": false
+  },
+  "gpu_info": {
+    "cuda_available": true,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_memory_gb": 8.0
+  }
+}
