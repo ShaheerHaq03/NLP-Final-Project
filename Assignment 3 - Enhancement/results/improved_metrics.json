@@ -1,4 +1,62 @@
 {
-  "status": "placeholder",
-  "note": "For Assignment 2 this may remain placeholder. For enhancement, copy improved/enhanced metrics here after training."
+  "experiment": "Assignment 3 Enhancement",
+  "model": "t5-small",
+  "training_profile": "enhanced",
+  "task": "Enhanced Domain Generalization for NLI",
+  "enhancements": [
+    "Enhanced ALL_PUBLIC + GNLI mixture",
+    "Expanded synthetic GNLI generation",
+    "TRUE benchmark evaluation support",
+    "Multi-GPU support",
+    "Extended dataset combinations"
+  ],
+  "datasets": [
+    "MNLI",
+    "ANLI",
+    "WANLI",
+    "GNLI_PROXY",
+    "ENHANCED_ALL_PUBLIC+GNLI_PROXY"
+  ],
+  "results": {
+    "MNLI_to_MNLI": 0.7884,
+    "MNLI_to_ANLI": 0.3064,
+    "MNLI_to_WANLI": 0.5668,
+    "MNLI_to_GNLI_PROXY": 1.0000,
+
+    "ANLI_to_MNLI": 0.7288,
+    "ANLI_to_ANLI": 0.4412,
+    "ANLI_to_WANLI": 0.5792,
+    "ANLI_to_GNLI_PROXY": 1.0000,
+
+    "WANLI_to_MNLI": 0.6796,
+    "WANLI_to_ANLI": 0.3636,
+    "WANLI_to_WANLI": 0.6552,
+    "WANLI_to_GNLI_PROXY": 0.9904,
+
+    "GNLI_PROXY_to_MNLI": 0.6392,
+    "GNLI_PROXY_to_ANLI": 0.3320,
+    "GNLI_PROXY_to_WANLI": 0.5048,
+    "GNLI_PROXY_to_GNLI_PROXY": 1.0000,
+
+    "ENHANCED_ALL_PUBLIC_GNLI_PROXY_to_MNLI": 0.7640,
+    "ENHANCED_ALL_PUBLIC_GNLI_PROXY_to_ANLI": 0.3844,
+    "ENHANCED_ALL_PUBLIC_GNLI_PROXY_to_WANLI": 0.6320,
+    "ENHANCED_ALL_PUBLIC_GNLI_PROXY_to_GNLI_PROXY": 1.0000
+  },
+  "improvements_over_baseline": {
+    "MNLI_accuracy_change": -0.0070,
+    "ANLI_accuracy_change": -0.0251,
+    "WANLI_accuracy_change": -0.0160,
+    "generalization_pipeline_extended": true
+  },
+  "generated_outputs": [
+    "cross_dataset_accuracy_results.csv",
+    "cross_dataset_accuracy_pivot.csv",
+    "dataset_summary.csv",
+    "gnli_proxy_dataset.csv",
+    "paper_reference_table5_true_avg.csv",
+    "paper_reference_table6_t5_small.csv",
+    "training_log.csv"
+  ],
+  "status": "completed"
 }
