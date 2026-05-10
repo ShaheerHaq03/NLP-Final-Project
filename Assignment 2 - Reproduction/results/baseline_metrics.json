@@ -1,4 +1,25 @@
 {
-  "status": "placeholder",
-  "note": "Generated outputs are saved by train.py into the configured output_dir. Copy final baseline metrics here before submission."
+  "experiment": "Assignment 2 Reproduction",
+  "model": "t5-small",
+  "task": "3-way Natural Language Inference",
+  "datasets": [
+    "MNLI",
+    "ANLI",
+    "WANLI",
+    "GNLI_PROXY"
+  ],
+  "metrics": {
+    "cross_dataset_evaluation": true,
+    "results_file": "cross_dataset_accuracy_results.csv",
+    "pivot_file": "cross_dataset_accuracy_pivot.csv"
+  },
+  "generated_outputs": [
+    "dataset_summary.csv",
+    "gnli_proxy_dataset.csv",
+    "cross_dataset_accuracy_results.csv",
+    "cross_dataset_accuracy_pivot.csv",
+    "training_log.csv",
+    "training_curve.png"
+  ],
+  "status": "completed"
 }
